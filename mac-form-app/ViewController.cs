@@ -16,6 +16,7 @@ namespace macformapp
             base.ViewDidLoad();
 
             // Do any additional setup after loading the view.
+            label1.StringValue = "Hello world";
         }
 
         public override NSObject RepresentedObject
@@ -29,6 +30,11 @@ namespace macformapp
                 base.RepresentedObject = value;
                 // Update the view, if already loaded.
             }
+        }
+
+        partial void button1_clicked(Foundation.NSObject sender)
+        {
+            label1.StringValue += string.Format(textfield1.StringValue + "\r\n");
         }
     }
 }
